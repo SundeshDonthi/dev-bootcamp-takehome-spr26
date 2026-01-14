@@ -1,8 +1,87 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bits of Good – Intro Card</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-<!-- Your HTML Here -->
+
+    <body>
+        <main class="page">
+            <section class="card" aria-label="Intro card for Bits of Good">
+                <div class="card-header">
+                    <h1 class="name">Sundesh Donthi</h1>
+                    <p class="tagline">Computer Science @ Georgia Tech</p>
+                    <p class="meta">Year: 2nd Year Undergraduate</p>
+                    <!-- Change the year above if needed -->
+                </div>
+
+                <div class="card-body">
+                    <div class="info-row">
+                        <h2 class="section-title">Where I’m From</h2>
+                        <p class="section-text">
+                            Raleigh, North Carolina
+                            <!-- Update your hometown here if needed -->
+                        </p>
+                    </div>
+
+                    <div class="info-row">
+                        <h2 class="section-title">Social Good Passion</h2>
+                        <p class="section-text">
+                            I care deeply about using technology and teamwork to create real-world impact.
+                            In high school, I helped fundraise over $230,000 for the American Cancer Society
+                            by organizing 5Ks, securing sponsorships, and running a 199-mile relay from
+                            Mount Hood to the Pacific Ocean.
+                        </p>
+                        <p class="section-text">
+                            At Georgia Tech, I’m excited to use my skills in computer science to support
+                            mission-driven nonprofits through thoughtful, impactful products.
+                        </p>
+                    </div>
+
+                    <div class="info-row">
+                        <h2 class="section-title">What I’m Learning</h2>
+                        <ul class="pill-list">
+                            <li class="pill">Java</li>
+                            <li class="pill">Python</li>
+                            <li class="pill">HTML</li>
+                            <li class="pill">CSS</li>
+                            <li class="pill">Algorithms & Data Structures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button class="toggle-button" id="more-button">
+                        More about me ↓
+                    </button>
+                    <div class="more-panel" id="more-panel">
+                        <p class="section-text">
+                            Recently, I joined the GT Ramblin’ RAAS dance team with zero prior
+                            experience. Learning choreography from scratch has reinforced a mindset
+                            I bring to everything I do: embrace being a beginner, focus on the
+                            process, and enjoy steady growth.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            // Simple interactivity: toggle extra info panel
+            const button = document.getElementById("more-button");
+            const panel = document.getElementById("more-panel");
+
+            button.addEventListener("click", function () {
+                panel.classList.toggle("open");
+                if (panel.classList.contains("open")) {
+                    button.textContent = "Less about me ↑";
+                } else {
+                    button.textContent = "More about me ↓";
+                }
+            });
+        </script>
+    </body>
 </html>
